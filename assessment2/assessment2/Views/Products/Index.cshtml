@@ -1,0 +1,184 @@
+﻿@*@@model IEnumerable<assessment2.Models.Product>*@
+@model assessment2.ViewModels.ProductIndexViewModel
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Products";
+}
+@*@Styles.Render("~/Content/productindex.css")*@
+
+<div class=" count">
+    <p>
+        @(String.IsNullOrWhiteSpace (Model.Search) ? "Showing all" : "You search for " + Model.Search + " found")
+        @Model.Products.TotalItemCount produts
+    </p>
+</div>
+
+<div class="filter">
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "custom-button" })
+        @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+        {
+            <label>Filter by category:</label>
+
+
+            @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+            <label>Sort By:</label>
+            @Html.DropDownListFor(vm => vm.SortBy, new SelectList(Model.Sorts, "Value", "Key"), "Default")
+            <input type="Submit" value="Filter" />
+            <input type="hidden" name="Search" id="Search" value="@ViewBag.Search" />
+        }
+    </p>
+</div>
+
+<table class="producttable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Price)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "custom-link" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "custom-link" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "custom-link" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <ul class="pagination">
+        @if (Model.Products.HasPreviousPage)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", new
+                {
+                    category = Model.Category,
+                    Search = Model.Search,
+                    sortBy = Model.SortBy,
+                    page = Model.Products.PageNumber - 1
+                })">&laquo;</a>
+            </li>
+        }
+        @for (int i = 1; i <= Model.Products.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.Products.PageNumber ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Index", new
+                {
+                    category = Model.Category,
+                    Search = Model.Search,
+                    sortBy = Model.SortBy,
+                    page = i
+                })">@i</a>
+            </li>
+        }
+        @if (Model.Products.HasNextPage)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", new
+                {
+                    category = Model.Category,
+                    Search = Model.Search,
+                    sortBy = Model.SortBy,
+                    page = Model.Products.PageNumber + 1
+                })">&raquo;</a>
+            </li>
+        }
+        Page @(Model.Products.PageCount <Model.Products.PageNumber ? 0 : Model.Products.PageNumber) of @Model.Products.PageCount
+    </ul>
+</div>
+
+
+<div class="footer container">
+    <footer>
+        <strong>Email:</strong>   <a href="mailto:Support@example.com">2768493718@qq.com</a><br />
+        <div class="link2">
+            <a href="#" onclick="validateHTML()">Validate HTML5</a>
+            <a href="#" onclick="validateCSS()">Validate CSS3</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function validateHTML() {
+        var htmlContent = document.documentElement.outerHTML;
+
+        var w3cValidatorUrl = "https://validator.w3.org/nu/";
+
+        // 将 HTML 代码发送到 W3C Validator API
+        var w3cValidatorForm = document.createElement("form");
+        w3cValidatorForm.method = "POST";
+        w3cValidatorForm.enctype = "multipart/form-data";
+        w3cValidatorForm.action = w3cValidatorUrl;
+        w3cValidatorForm.target = "_blank";
+        w3cValidatorForm.style.display = "none";
+
+        var w3cValidatorInput = document.createElement("input");
+        w3cValidatorInput.type = "hidden";
+        w3cValidatorInput.name = "content";
+        w3cValidatorInput.value = htmlContent;
+        w3cValidatorForm.appendChild(w3cValidatorInput);
+
+        document.body.appendChild(w3cValidatorForm);
+        w3cValidatorForm.submit();
+    }
+    function validateCSS() {
+        var cssContent = '';
+
+        var styleSheets = document.styleSheets;
+        for (var i = 0; i < styleSheets.length; i++) {
+            var rules = styleSheets[i].cssRules;
+            if (rules) {
+                for (var j = 0; j < rules.length; j++) {
+                    cssContent += rules[j].cssText + '\n';
+                }
+            }
+        }
+
+        var cssValidatorUrl = "http://jigsaw.w3.org/css-validator/validator";
+
+        // 将 CSS 代码发送到 CSS Validator
+        var cssValidatorForm = document.createElement("form");
+        cssValidatorForm.method = "POST";
+        cssValidatorForm.enctype = "multipart/form-data";
+        cssValidatorForm.action = cssValidatorUrl;
+        cssValidatorForm.target = "_blank";
+        cssValidatorForm.style.display = "none";
+
+        var cssValidatorInput = document.createElement("input");
+        cssValidatorInput.type = "hidden";
+        cssValidatorInput.name = "text";
+        cssValidatorInput.value = cssContent;
+        cssValidatorForm.appendChild(cssValidatorInput);
+
+        document.body.appendChild(cssValidatorForm);
+        cssValidatorForm.submit();
+    }
+</script>
+

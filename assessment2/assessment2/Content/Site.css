@@ -1,0 +1,707 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-bottom: 20px;
+    background-color:antiquewhite;
+}
+
+.header{
+    padding:0;
+    margin:0;
+    width:100%;
+}
+
+.title {
+    padding: 0 0 40px;
+}
+
+.title h2 {
+    color: white;
+    font-size: 35px;
+    font-family: 'Arial';
+    font-weight: 600;
+    background-color: darkred;
+    padding: 5px;
+    transition: border 0.3s;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    .title h2:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+.title h3 {
+        padding: 5px;
+        width: 200px;
+        text-align: center;
+        font-size: 26px;
+        color: #fff;
+        border: 1px solid #fcee50;
+        border-top: none;
+        background-color: #75b36dda;
+        font-family: Arial;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.container2 {
+    margin: 0 auto;
+}
+
+
+.centered-image {
+    width:100vw;
+    padding: 10px 0;
+    margin-top: -50px;
+    overflow:hidden;
+}
+
+body, .container {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    height: 100vh;
+}
+
+/* Define styles for left and right sections */
+.sec-1 {
+    display: flex;
+    width: 100%; /* Ensure it takes the full available width */
+    padding-left: 230px; /* Add left and right padding */
+    padding-right: 20px;
+}
+
+.sec-1-left {
+    width: 60%;
+    margin-right: 130px;
+}
+
+
+.sec-1-left-videopart h2 {
+    color: white;
+    width: 100%;
+    margin-top: 120px;
+    margin-left: 400px;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 35px;
+    background-color: darkred;
+    padding: 5px;
+    transition: border 0.3s, box-shadow 0.3s; /* 添加 box-shadow 过渡效果 */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sec-1-left-videopart h2:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果，可以根据需要调整阴影的颜色和大小 */
+}
+
+
+.sec-1-left-video {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.sec-1-right {
+    width: 40%;
+    float: left;
+    margin-left: 30px;
+}
+
+.sec-1-img img {
+    width: 500px;
+    height: auto;
+    border: 2px solid yellow;
+}
+
+.sec-1-text {
+    margin-top: -10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: 'DejaVu Math TeX Gyre';
+    font-weight: 500;
+    background-color: rgba(139, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.sec-1-img:hover {
+    transform: scale(1.2);
+}
+
+.information-main {
+    margin-bottom: 80px;
+    margin-left: 350px;
+}
+
+.information-1-img {
+    padding: 100px 80px;
+    margin-top: -250px;
+    width: 100vw;
+    justify-content: space-between;
+    position: relative;
+    display: inline-block;
+}
+
+.information-1-img img {
+    width: 32.5%;
+    box-sizing: border-box;
+    border: 2px solid #fcee50;
+}
+
+.information-1-img img:hover {
+    filter: brightness(1.1);
+}
+
+.information-1-content p {
+    margin-right: 150px;
+    padding: 30px;
+    text-align: left;
+    background-color: rgba(139, 0, 0, 0.1);
+}
+
+.information-1-text {
+    padding: 40px 40px 0;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-bottom: 300px;
+    margin-top: -100px;
+
+}
+
+.information-1-text h3 {
+    width: 200px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #fcee50;
+    transition: all .25s linear;
+    margin-left: 30px;
+    font-weight: 600;
+}
+
+.information-1-text:hover h3 {
+    width: 100%;
+}
+
+.information-1-text-left {
+    flex: 1;
+}
+
+.information-1-text-inner {
+    align-items: center;
+    line-height: 25px;
+}
+
+.information-1-text-left {
+    padding-left: 60px;
+    margin-left: 350px;
+    margin-bottom: 40px;
+    margin-top: -380px;
+}
+
+.information-1-text-left h4 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 23px;
+ }
+
+.information-1-text-left p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'DejaVu Math TeX Gyre';
+ }
+
+.information-1-text-img {
+    margin-left: 10px;
+    width: 20%;
+}
+
+.information-1-text-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.information-1-text-img img:hover {
+    filter: brightness(1.1);
+}
+
+.information-1-text-img:hover {
+    transform: scale(1.2);
+}
+
+.information-1-text5 {
+    padding-bottom: 40px;
+}
+
+#title{
+    text-align:center;
+    margin-top: 50px;
+    margin-left: 380px;
+}
+
+/*Contact页面*/
+.form-group1 {
+    padding-left: 300px;
+    font-size: 20px;
+}
+
+.form-group2 {
+    padding-left: 800px;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.Part {
+    margin-left:100px;
+    width: 100%;
+}
+
+
+.part2 {
+    margin-top:-423px;
+}
+
+.mt-4 {
+    font-size: 18px;
+}
+
+.form-check-label {
+    font-size: 18px;
+}
+
+/*Category页面*/
+.table {
+    margin-left: 300px;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.table tr {
+    line-height: 3;
+}
+
+.table td, .table th {
+    vertical-align:middle;
+}
+
+.create {
+    margin-top: 500px;
+    margin-left: 300px;
+    font-size: 20px;
+}
+
+.count {
+    margin-left: 300px;
+    font-size: 25px;
+}
+
+.filter {
+    margin-left: 300px;
+    font-size: 20px;
+}
+
+.pagination {
+    display:flex;
+    justify-content:center;
+    margin-top: 50px;
+    margin-left: 300px;
+    font-size: 16px;
+    color:black;
+}
+
+
+.submit button {
+    margin-left: 1000px;
+    margin-top: 10px;
+}
+
+.email {
+    margin-left: 400px;
+}
+
+.producttable {
+    margin-left: 250px;
+    font-size: 16px;
+}
+
+.producttable tr {
+    line-height: 2.5;
+}
+
+.producttable td, .producttable th {
+    vertical-align: middle;
+}
+/*Edit页面*/
+.form-horizontal {
+    margin-left: 750px;
+}
+
+.form-horizontal hr{
+    margin-left:-230px;
+}
+
+.col-md-offset-2 col-md-10 {
+    margin-left:100px;
+}
+
+.back to list {
+    margin-left: 300px;
+}
+
+/*details页面*/
+.details h4 {
+    margin-left: 750px;
+    font-size: 20px;
+}
+
+.details hr {
+    margin-left: 350px;
+    font-size: 20px;
+}
+
+.dl-horizontal {
+    margin-left: 750px;
+    font-size: 20px;
+}
+
+.delete product h4{
+    margin-left: 300px;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: deepskyblue;
+    position: absolute;
+    border-radius: 5px;
+}
+
+#three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 310px;
+    height: auto;
+    z-index: 9999;
+    margin-top: 300px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    color: white;
+    text-align: center;
+    margin: 30px;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+
+.image-container:hover .overlay {
+    display: block;
+}
+
+#three .text {
+    color: #fff;
+    font-family: 'Comic Sans MS';
+    line-height: 1.5;
+    text-align: left;
+    padding: 20px;
+}
+
+#three img {
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    border-radius: 5%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    background-color: #007BFF;
+    color: #fff;
+    border: 1px solid #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.page-link:hover {
+        background-color: #0056b3;
+        border: 1px solid #0056b3;
+}
+
+.pagination .page-item a.page-link {
+    color: white;
+}
+
+
+.custom-button {
+    /*background-color: #337ab7; *//* 设置背景颜色 */
+    background-color: darkred;
+    color: white; /* 设置文本颜色 */
+    padding: 10px 20px; /* 设置内边距 */
+    border: 1px solid #2e6da4; /* 添加边框 */
+    text-decoration: none; /* 去除下划线 */
+    border-radius: 5px; /* 添加圆角 */
+}
+
+    /*.custom-button:hover {
+        transform: scale(1.2);*/ /* 悬停时的背景颜色 */
+    /*}*/
+
+.custom-link {
+    text-decoration: none; /* 去掉下划线 */
+    color: black; /* 将字体颜色设为黑色 */
+}
+
+
+.shell {
+    margin-top: 200px;
+    margin-left: -280px;
+    width: 650px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 10px 5px 50px rgba(122, 39, 39, 0.39);
+}
+
+.images {
+    width: 500%; /* Change this to 100% */
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.img {
+    width: 100%; /* Set a specific width for each image */
+    background-size: cover;
+}
+
+    .img:nth-child(1) {
+        background-image: url("Images/a1.jpg");
+    }
+
+    .img:nth-child(2) {
+        background-image: url("Images/a2.jpg");
+    }
+
+    .img:nth-child(3) {
+        background-image: url("Images/a3.jpg");
+    }
+
+    .img:nth-child(4) {
+        background-image: url("Images/a4.jpg");
+    }
+
+    .img:nth-child(5) {
+        background-image: url("Images/a5.jpg");
+    }
+
+.min {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 40px;
+    width: 30%;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.m {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid rgba(255, 255, 255, 0.5) 5px;
+    background-color: #fff;
+}
+
+/*.button1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}*/
+
+.button-left,
+.button-right {
+    font-size: 50px;
+    background-color: rgba(102, 123, 161, 0.288);
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 700px;
+    color: #fff;
+}
+/*
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/04.png);
+    z-index: -9999;
+    position: absolute;
+    filter: blur(12px);
+    opacity: .5;
+}*/
+.abc {
+    margin-top: 100px;
+    /* 100%窗口高度 */
+    height: 25vh;
+    width: 100vh;
+    /* 弹性布局 水平垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+    background: linear-gradient(200deg, #802857, #8B002B);
+    margin-left: 430px;
+}
+
+.container4 {
+    /* 相对定位 */
+    position: relative;
+    /* 弹性布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 允许换行 */
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+    .container4 .card {
+        position: relative;
+        max-width: 250px;
+        height: 215px;
+        background-color: #fff;
+        margin: 30px 15px;
+        padding: 20px 15px;
+        border-radius: 5px;
+        /* 阴影 */
+        box-shadow: 0 5px 200px rgba(0,0,0,0.5);
+        /* 动画过渡 */
+        transition: 0.3s ease-in-out;
+    }
+
+        .container4 .card:hover {
+            height: 420px;
+        }
+
+        .container4 .card .img-box {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            border-radius: 5px;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            top: -60px;
+            left: 20px;
+            /* 阴影 */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .container4 .card .img-box img {
+                width: 100%;
+            }
+
+        .container4 .card .text-box {
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            /* 设置元素不可见 */
+            visibility: hidden;
+            /* 不透明度 */
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+            .container4 .card .text-box p {
+                text-align: left;
+                line-height: 25px;
+                margin-top: 10px;
+                font-size: 15px;
+                color: #555;
+            }
+
+        .container4 .card:hover .text-box {
+            /* 鼠标移入，设置元素可见 */
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            /* 动画延迟0.2秒 */
+            transition-delay: 0.2s;
+        }
+
+.deleteproduct h3{
+    margin-left: 680px;
+}
+
+.deleteproduct h4 {
+    margin-left: 750px;
+}
